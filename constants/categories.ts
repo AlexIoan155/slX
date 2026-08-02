@@ -1,0 +1,130 @@
+import type { Category } from "@/types/domain";
+
+// The brief lists 27 granular topics. We group them into 15 coherent
+// categories for a sane UI flow while preserving full topical coverage
+// (see `covers` on each entry for traceability back to the brief).
+export const CATEGORIES: Category[] = [
+  {
+    id: "incendiu",
+    name: "Incendiu & Coș de fum",
+    shortName: "Incendiu",
+    icon: "Flame",
+    description: "Riscul de incendiu și starea coșului de fum.",
+    covers: ["Incendiu", "Coș fum"],
+  },
+  {
+    id: "electricitate",
+    name: "Electricitate",
+    shortName: "Electricitate",
+    icon: "Zap",
+    description: "Instalația electrică și riscul de scurtcircuit.",
+    covers: ["Electricitate"],
+  },
+  {
+    id: "gaz",
+    name: "Gaz",
+    shortName: "Gaz",
+    icon: "Flame",
+    description: "Instalația de gaz și siguranța aparatelor conectate.",
+    covers: ["Gaz"],
+  },
+  {
+    id: "apa-instalatii",
+    name: "Apă & Instalații sanitare",
+    shortName: "Apă",
+    icon: "Droplets",
+    description: "Conducte, robinete și riscul de avarii cu apă.",
+    covers: ["Apă", "Instalații"],
+  },
+  {
+    id: "inundatii",
+    name: "Inundații",
+    shortName: "Inundații",
+    icon: "Waves",
+    description: "Expunerea locuinței la inundații și ape mari.",
+    covers: ["Inundații"],
+  },
+  {
+    id: "umiditate-mucegai",
+    name: "Umiditate & Mucegai",
+    shortName: "Umiditate",
+    icon: "CloudRain",
+    description: "Ventilație, igrasie și risc de mucegai.",
+    covers: ["Umiditate", "Mucegai"],
+  },
+  {
+    id: "structura-acoperis",
+    name: "Structură & Acoperiș",
+    shortName: "Structură",
+    icon: "Building2",
+    description: "Starea structurii de rezistență și a acoperișului.",
+    covers: ["Structură", "Acoperiș"],
+  },
+  {
+    id: "incalzire-centrala",
+    name: "Încălzire & Centrală termică",
+    shortName: "Încălzire",
+    icon: "Thermometer",
+    description: "Sistemul de încălzire și centrala termică.",
+    covers: ["Încălzire", "Centrală"],
+  },
+  {
+    id: "securitate-alarma",
+    name: "Securitate, Camere & Alarmă",
+    shortName: "Securitate",
+    icon: "ShieldAlert",
+    description: "Protecția împotriva efracției și supraveghere.",
+    covers: ["Securitate", "Camere", "Alarmă"],
+  },
+  {
+    id: "ferestre-usi",
+    name: "Ferestre & Uși",
+    shortName: "Ferestre & Uși",
+    icon: "DoorClosed",
+    description: "Rezistența și etanșeitatea ferestrelor și ușilor.",
+    covers: ["Ferestre", "Uși"],
+  },
+  {
+    id: "smart-home-internet",
+    name: "Smart Home & Internet",
+    shortName: "Smart Home",
+    icon: "Wifi",
+    description: "Nivelul de automatizare și conectivitate al locuinței.",
+    covers: ["Internet", "Smart Home"],
+  },
+  {
+    id: "locatari",
+    name: "Copii, Persoane vârstnice & Animale",
+    shortName: "Locatari",
+    icon: "Users",
+    description: "Riscuri specifice locatarilor vulnerabili din locuință.",
+    covers: ["Copii", "Persoane vârstnice", "Animale"],
+  },
+  {
+    id: "mediu-vecinatate",
+    name: "Mediu & Vecinătate",
+    shortName: "Mediu",
+    icon: "TreePine",
+    description: "Context geografic, climatic și de vecinătate.",
+    covers: ["Mediu", "Vecinătate"],
+  },
+  {
+    id: "asigurare",
+    name: "Asigurare",
+    shortName: "Asigurare",
+    icon: "FileCheck2",
+    description: "Acoperirea prin asigurare a locuinței.",
+    covers: ["Asigurare"],
+  },
+  {
+    id: "intretinere",
+    name: "Întreținere generală",
+    shortName: "Întreținere",
+    icon: "Wrench",
+    description: "Frecvența reviziilor și a lucrărilor de întreținere.",
+    covers: ["Întreținere"],
+  },
+];
+
+export const getCategoryById = (id: string): Category | undefined =>
+  CATEGORIES.find((c) => c.id === id);
