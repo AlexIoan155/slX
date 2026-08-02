@@ -33,6 +33,6 @@ export function createClient(): SupabaseClient<Database> {
     );
   }
 
-  browserClient = createBrowserClient<Database>(url, anonKey);
+  browserClient = createBrowserClient(url, anonKey) as SupabaseClient<Database>;
   return browserClient;
 }

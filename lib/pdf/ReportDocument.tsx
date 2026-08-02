@@ -191,7 +191,6 @@ function ScoreGauge({ score, level }: { score: number; level: RiskLevel }) {
         strokeWidth={stroke}
         fill="none"
         strokeDasharray={`${circumference} ${circumference}`}
-        strokeDashoffset={offset}
         strokeLinecap="round"
         transform={`rotate(-90 ${size / 2} ${size / 2})`}
       />

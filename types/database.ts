@@ -95,7 +95,6 @@ export interface ActivityLogRow {
   created_at: string;
 }
 
-/** Minimal `Database` shape, compatible with `createBrowserClient<Database>()`. */
 export interface Database {
   public: {
     Tables: {

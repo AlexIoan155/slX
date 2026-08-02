@@ -42,7 +42,12 @@ export async function GET(request: NextRequest) {
   }
 
   const result = rowToAssessmentResult(resultRow);
-  const buffer = await renderToBuffer(createElement(ReportDocument, { result, userName: profile.name }));
+  const buffer = await renderToBuffer(
+  <ReportDocument
+    result={result}
+    userName={profile.name}
+  />
+);
 
   return new NextResponse(new Uint8Array(buffer), {
     status: 200,
